@@ -1,5 +1,24 @@
 {
+  "name": "accenture_qa_automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/VictorMilagres/accenture_qa_automation.git",
+  "author": "Victor Milagres",
+  "license": "MIT",
   "devDependencies": {
     "cypress": "^15.2.0"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open-homol": "cypres open --env ENV=homol",
+    "cy:open-prod": "cypres open --env ENV=prod",
+    "cy:run-homol": "cypres run --env ENV=homol",
+    "cy:run-prod": "cypres run --env ENV=prod"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.1.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-fs": "^0.2.6",
+    "cypress-plugin-api": "^2.11.2"
   }
 }
