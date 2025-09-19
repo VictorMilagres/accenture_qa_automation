@@ -1,8 +1,9 @@
 import { HomePage, ItemsPage, FormPage } from "../../support/pages";
 import student from "../../fixtures/student.js";
 
-describe('template spec', () => {
-  it(`Given I need to fill out the student form
+describe('Forms', () => {
+  it(`Scenario: Fill a new student form
+      Given I need to fill out the student form
       When I enter all valid informations in the form
       Then the form should be submitted successfully`, () => {
       
