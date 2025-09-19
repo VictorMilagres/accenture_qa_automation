@@ -1,0 +1,21 @@
+exports.el = {
+  firstNameField: "#firstName",
+  lastNameField: "#lastName",
+  userEmailField: "#userEmail",
+  genderMaleRadio: "#gender-radio-1",
+  genderFemaleRadio: "#gender-radio-2",
+  gendeOtherRadio: "#gender-radio-3",
+  mobilePhoneField: "#userNumber",
+  dateOfBirthInput: "#dateOfBirthInput",
+  subjectsField: "#subjectsContainer",
+  sportsCheckbox: "#hobbies-checkbox-1",
+  readCheckbox: "#hobbies-checkbox-2",
+  musicCheckbox: "#hobbies-checkbox-3",
+  uploadBtn: "#uploadPicture",
+  addressBox: "#currentAddress",
+  stateSelector: "#state",
+  citySelector: "#city",
+  submitBtn: "#submit",
+  popupModal: "#example-modal-sizes-title-lg",
+  closePopup: "#closeLargeModal"
+};
