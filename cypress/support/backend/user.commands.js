@@ -9,13 +9,25 @@ Cypress.Commands.add("createUser", (createUser) => {
     })
 })
 
-Cypress.Commands.add("userById", (createUser) => {
+Cypress.Commands.add("userById", () => {
     cy.basicAuth("createUser").then((basicAuth) => {
         cy.api({
             method: 'GET',
             failOnStatusCode: false,
             url: `${Cypress.env(env).api_account}/User/${Cypress.env("userId")}`,
-            body: createUser,
+            headers: {
+                Authorization: basicAuth
+            }
+        })
+    })
+})
+
+Cypress.Commands.add("deleteUser", () => {
+    cy.basicAuth("createUser").then((basicAuth) => {
+        cy.api({
+            method: 'DELETE',
+            failOnStatusCode: false,
+            url: `${Cypress.env(env).api_account}/User/${Cypress.env("userId")}`,
             headers: {
                 Authorization: basicAuth
             }

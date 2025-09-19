@@ -7,7 +7,7 @@ describe("Create user", () => {
           .then(res => {
             expect(res.status).to.eq(201)
             expect(res.body.userID).is.not.empty
-            expect(res.body.username).eq(createUser.username)
+            expect(res.body.username).eq("victormilagres1")
           })
       })
   })
@@ -104,4 +104,23 @@ describe("Create user", () => {
         })
     })
   })
-})
+
+  it("Create an user already exist", () => {
+    cy.fixture("createUser").then((createUser) => {
+        cy.createUser(createUser)
+          .then(res => {
+            expect(res.status).to.eq(406)
+            expect(res.body.code).eq("1204")
+            expect(res.body.message).eq("User exists!")
+          })
+      })
+  })
+
+  after(() => {
+    cy.fixture("createUser").then((createUser) => {
+      cy.login(createUser)
+    })
+
+    cy.deleteUser();
+  });
+});
