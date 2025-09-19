@@ -1,4 +1,3 @@
-import student from "../../../fixtures/student.js";
 import { el } from "./elements.js";
 
 class FormPage {
