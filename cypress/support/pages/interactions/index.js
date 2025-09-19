@@ -56,7 +56,7 @@ class InteractionsPage {
   validateOrder() {
     this.getCurrentNumbers().then(numbers => {
       const sorted = [...numbers].sort((a, b) => a - b);
-      expect(numbers).to.deep.equal(sorted);
+      expect(numbers).to.deep.eq(sorted);
     });
   }
 }

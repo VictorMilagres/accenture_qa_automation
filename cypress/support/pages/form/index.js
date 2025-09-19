@@ -29,7 +29,6 @@ class FormPage {
   };
 
   addBirthdate(student) {
-    // cy.get(el.dateOfBirthInput).type(student.birthdate);
     cy.get(el.dateOfBirthInput).invoke('val', '15 Feb 2000').trigger('change');
   };
 
