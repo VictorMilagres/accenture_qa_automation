@@ -1,7 +1,6 @@
 import { el } from "./elements.js";
 
 class HomePage {
-  // elementos
   get startStopButton() {
     return cy.get(el.startStopBtn);
   }
@@ -14,17 +13,14 @@ class HomePage {
     return cy.get('.progress-bar');
   }
 
-  // inicia a progress bar
   start() {
     this.startStopButton.click();
   }
 
-  // pausa a progress bar
   stop() {
     this.startStopButton.click();
   }
 
-  // valida que o valor atual é igual ao esperado
   validateValue(expectedPercent) {
     this.progressBar
       .invoke('attr', 'aria-valuenow')
@@ -33,7 +29,6 @@ class HomePage {
       });
   }
 
-  // valida que o valor atual é menor ou igual ao máximo
   validateMaxValue(maxPercent) {
     this.progressBar
       .invoke('attr', 'aria-valuenow')
@@ -51,7 +46,6 @@ class HomePage {
     this.resetButton.click();
   }
 
-  // reset da progress bar
   reset() {
     this.resetButton.click();
   }
