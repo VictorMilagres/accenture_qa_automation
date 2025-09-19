@@ -1,0 +1,11 @@
+{
+  "userId": "${userId}",
+  "collectionOfIsbns": [
+    {
+      "isbn": "${book1}"
+    },
+    {
+      "isbn": "${book2}"
+    }
+  ]
+}

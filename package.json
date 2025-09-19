@@ -6,19 +6,24 @@
   "author": "Victor Milagres",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^15.2.0"
+    "cypress": "^15.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "scripts": {
     "cy:open": "cypress open",
-    "cy:open-homol": "cypres open --env ENV=homol",
-    "cy:open-prod": "cypres open --env ENV=prod",
-    "cy:run-homol": "cypres run --env ENV=homol",
-    "cy:run-prod": "cypres run --env ENV=prod"
+    "cy:open-homol": "cypress open --env ENV=homol",
+    "cy:open-prod": "cypress open --env ENV=prod",
+    "cy:run-homol": "cypress run --env ENV=homol",
+    "cy:run-prod": "cypress run --env ENV=prod"
   },
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^23.1.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-fs": "^0.2.6",
-    "cypress-plugin-api": "^2.11.2"
+    "cypress-plugin-api": "^2.11.2",
+    "faker-br": "^0.5.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/bdd"
   }
 }

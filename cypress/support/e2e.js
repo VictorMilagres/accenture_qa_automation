@@ -4,3 +4,4 @@ Cypress.on("uncaught:exception", (error, runnable) => {
 })
 
 import './commands'
+import 'cypress-plugin-api'
